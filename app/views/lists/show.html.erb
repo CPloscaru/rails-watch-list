@@ -1,7 +1,11 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.list_url %>);">
-  <div class="container">
-    <h1><strong>Your List</strong></h1>
-    <p><%= @list.name %></p>
+<div class="banner banner-w-upload d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @image_url %>);">
+  <button type="button" class="btn btn-link upload-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+  </button>
+  <%= render "upload-modal", list: @list %>
+  <div class="container container-banner">
+      <h1><strong>Your List</strong></h1>
+      <p><%= @list.name %></p>
   </div>
 </div>
 
